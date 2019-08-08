@@ -2,7 +2,6 @@
 
 	
 	<section class="hero--page hero">
-		<?php get_template_part( 'parts/video' ); ?>
 	</section>
 
 	<section class="project section">
