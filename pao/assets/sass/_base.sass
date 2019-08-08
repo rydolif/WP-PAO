@@ -1,0 +1,159 @@
+
+//----------------------fonts---------------------
+$fonts: 'Open Sans', sans-serif
+
+//---------------------end-fonts---------------------
+
+//----------------------color---------------------
+$accent: #AB8B33
+$text: #111111
+$light: #686868
+
+$h1: #F2F2F2
+
+// $bg: #E5E5E5
+//---------------------end-color---------------------
+
+body
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	background-color: #fff
+	font-family: $fonts
+	font-size: 16px
+	color: $text
+	line-height: 1.3
+	font-weight: 400
+
+::selection
+	background-color: $accent
+	color: #fff
+
+a, div, ul, li, input, textarea
+	&:hover,
+	&:focus
+		outline: none
+
+section
+	overflow: hidden
+	
+h1, h2, h3, h4, h5, h6
+	font-weight: 800
+	line-height: 1.2
+	margin: 0
+	padding: 0
+
+h1, h2
+	font-size: 36px
+
+h1
+	color: $h1
+	margin-bottom: 35px
+	font-weight: 700
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+i
+	font-style: normal
+	font-size: 16px
+	color: #fff
+
+input, textarea
+	border: none
+	border-radius: 0
+	outline: none
+	box-shadow: none
+	-webkit-appearance: none
+	width: 100%
+	background: none
+	border-bottom: 1px solid #C4C4C4
+	transition: all .6s
+	font-size: 12px
+	color: #fff
+	
+	&:focus:required:invalid
+		border-color: red
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&:required:valid
+		border-color: green
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&::placeholder
+		color: $light
+		font-size: 12px
+
+input
+	height: 35px
+	line-height: 35px
+
+	&::-webkit-input-placeholder /* Chrome/Opera/Safari */
+	&::-moz-placeholder /* Firefox 19+ */
+	&:-ms-input-placeholder /* IE 10+ */
+	&:-moz-placeholder /* Firefox 18- */
+		line-height: 50px
+
+	&::placeholder
+		line-height: 50px
+
+textarea
+	&::placeholder
+		line-height: 1.4
+
+b, strong
+	font-weight: 600
+
+p
+	margin: 0
+	padding: 0
+
+a,
+a:focus,
+a:hover,
+button,
+button:focus,
+button:hover,
+	outline: none
+	text-decoration: none
+
+a
+	position: relative
+	z-index: 1
+	color: #fff
+	transition: all .3s
+
+	&::before
+		content: ''
+		width: 0
+		transform: scale(0)
+		transition: all .6s
+		position: absolute
+		right: 0
+		left: 0
+		bottom: 0
+		width: 70%
+		height: 1px
+		background-color: $accent
+		z-index: -1
+		margin: 0 auto
+
+	&:hover,
+	&:focus
+		color: $accent
+		text-decoration: none
+		&::before
+			transform: scale(1)
+
+
+@import "_base/animation"
+@import "_base/btn"
+@import "_base/form"
+@import "_base/modal"
+@import "_base/hamburger"
